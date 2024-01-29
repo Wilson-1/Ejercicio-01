@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="app.component.css">
     <title>Latinoamericano</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
     <!-- Navbar -->
     <nav class="bg-blue-500 p-4 text-white">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-lg font-semibold">Latinoamericano</a>
+            <a href="#" class="text-lg font-semibold">Unidad Educativa Latinoamericano</a>
             <ul class="flex space-x-4">
                 <li><a href="#" class="hover:text-gray-300">Inicio</a></li>
                 <li><a href="#" class="hover:text-gray-300">Acerca de nosotros</a></li>
@@ -25,6 +48,9 @@
     <section class="bg-blue-700 text-white py-16">
         <div class="container mx-auto text-center">
             <h1 class="text-4xl font-bold mb-4">Educación de Calidad para el Futuro</h1>
+            <div style="display: flex; justify-content: center;">
+                <app-logo></app-logo>
+            </div>
             <p class="text-lg">Preparando a los estudiantes para un mundo en constante cambio.</p>
             <a href="#" class="mt-6 bg-white text-blue-700 py-2 px-4 rounded-full inline-block hover:bg-gray-200 transition duration-300">Solicitar Información</a>
         </div>
@@ -56,6 +82,10 @@
     <!-- Galería de Fotos -->
     <section class="container mx-auto my-8">
         <h2 class="text-2xl font-semibold mb-4">Galería de Fotos</h2>
+        <div class="gallery ">
+            
+        <app-images></app-images>
+        </div>
         <!-- Agregar una galería de fotos utilizando clases de Tailwind para diseño -->
     </section>
 
@@ -63,6 +93,7 @@
     <section class="bg-gray-200 py-8">
         <div class="container mx-auto">
             <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
+            <app-contact></app-contact>
             <!-- Agregar formulario de contacto o información de contacto -->
         </div>
     </section>
